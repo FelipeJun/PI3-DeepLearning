@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body style = " margin-left: auto; margin-right: auto;margin-bottom: 200px;width: 1000px;background-color:#f9f9f8 ">
+    <h1>PI 3 - Deep Learning - Ciência da Computação 5° Semestre</h1>
+    <p>Integrantes do grupo:</p>
+    <ul>
+        <li>Felipe Jun</li>
+        <li>João Baptista</li>
+        <li>Otavio Rodrigues</li>
+        <li>Christopher Ferreira</li>
+    </ul>
+
+    <h1>Introdução</h1>
+    <p>Neste PI, foi implementado uma IA reconhecedora de placas de trânsito Alemãs, baseados nos conceitos de deep learning, com a criação de uma rede convolucional(CNN),
+        Sendo usado um dataset retirado o Kaggle:</p> 
+    <a href = "https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign" target="_blank">Traffic Signs Dataset</a>
+    
+    <h1>Implementação</h1>
+    <h2>Inteligência Artificial</h2>
+    <h3>Criação do modelo da IA</h3>
+    <p>Para iniciarmos a IA, pegamos as imagens de placas de trânsito dadas pelo dataset, 
+        fazendo processamento destas e transformando-as em um tipo de data aceita pelo keras ( biblioteca usada para deep learning )</p>
+    <p>Após tratadas, para podermos fazer melhores predições, fazemos um processo chamado 
+        <a href="https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f" target="_blank">"One Hot encoding"</a>, 
+        que categoriza estas variaváveis em um tipo de formulario para facilitar o algoritmo.</p>
+    <img src="1.PNG">
+    <img src="2.PNG">
+    <h3>Implementação do modelo</h3>
+    <p>Criamos o modelo do tipo "Sequencial", para podermos inserir camadas da rede neural em série,
+        utilizando as funções de ativação relu e softmax. Por fim, aplicado o fit e testado a acurácia de nosso modelo, variando entre 15 a 50 épocas.</p>
+    <img src="3.PNG">
+    <img src="4.PNG">
+    <h3>Testando a acurácia do modelo</h3>
+    <p>Ao final do fit, salvamos o modelo e testamo-os com os dados dos CSVs de train e Test, e criamos um novo modelo testado.</p>
+    <img src="5.PNG">
+    <h2>Discord bot</h2>
+    <p>Foi criado um bot para o discord, onde nele teremos a interação com o usuário, onde ele enviará uma imagem e o BOT irá retornar o nome da placa.</p> 
+    <p>Para isto, criamos um evento de listening do canal usado a partir do envio de uma imagem em formato .png. 
+        Esse evento é escutado pelo bot, no qual recebemos a imagem e ela já é tratada nos padrões que precisamos.</p>
+    <img src="6.PNG">
+
+    <h1>Sites usados para a criação e entendimento do código</h1>
+    <ul>
+        <li><a href="https://data-flair.training/blogs/python-project-traffic-signs-recognition/" target="_blank">Traffic Signs Dataset</li>
+        <li><a href="https://www.kaggle.com/datasets/meowmeowmeowmeowmeow/gtsrb-german-traffic-sign" target="_blank">Kaggle Traffic Signs Dataset</li>
+        <li><a href="https://www.kaggle.com/code/vsdsmahidhar/traffic-sign-classification-using-deep-learning" target="_blank">
+        traffic-sign-classification-using-deep-learning</li>
+        <li><a href="https://keras.io/examples/vision/image_classification_from_scratch/" target="_blank">image classification from scratch</li>
+        <li><a href="https://www.tensorflow.org/guide/keras/save_and_serialize" target="_blank">keras-save_and_serialize</li>
+        <li><a href="https://scikit-learn.org/stable/modules/model_evaluation.html" target="_blank">model_evaluation</li>
+        <li><a href="https://colab.research.google.com/drive/1UAa1tcZy4ISNPR_tERkXkfk3yQ4qAKaa?usp=sharing" target="_blank">MNIST Fashion</li>
+        <li><a href="https://colab.research.google.com/drive/1ArGJ1N5HavdpQGHtP8VYkQ66ZdkoekEy?usp=sharing " target="_blank">MNIST Deep Learning</li>
+    </ul>
+
+</body>
+</html>

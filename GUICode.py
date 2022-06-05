@@ -5,7 +5,7 @@ from PIL import ImageTk, Image
 import numpy
 from keras.models import load_model
 
-model = load_model('traffic_classifier.h5')
+model = load_model('quilonbot/model/traffic_classifier.h5')
 # Dicionario com os tipos de placa
 classes = { 1:'Speed limit (20km/h)',
             2:'Speed limit (30km/h)', 

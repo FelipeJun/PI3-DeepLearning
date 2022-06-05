@@ -100,5 +100,5 @@ async def save(ctx):
   else:
     print("File does not exist")
     
-TOKEN = ("Pegar token no env")
+TOKEN = ("OTc3NjQ2NzE4NzM0NzAwNTc1.GsNMQ_.ayRNJeNy8B4WeGYFONAfYIMU2QGRvsL03x3up8")
 bot.run(TOKEN)

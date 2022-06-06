@@ -5,18 +5,18 @@ from PIL import ImageTk, Image
 import numpy
 from keras.models import load_model
 
-model = load_model('traffic_classifier.h5')
+model = load_model('quilonbot/model/traffic_classifier.h5')
 # Dicionario com os tipos de placa
-classes = { 1:'Velocidade Máxima Permitida (20km/h)',
-            2:'Velocidade Máxima Permitida (30km/h)', 
-            3:'Velocidade Máxima Permitida (50km/h)', 
-            4:'Velocidade Máxima Permitida (60km/h)', 
-            5:'Velocidade Máxima Permitida (70km/h)', 
-            6:'Velocidade Máxima Permitida (80km/h)', 
-            7:'Fim da Velocidade Máxima Permitida (80km/h)', 
-            8:'Velocidade Máxima Permitida (100km/h)', 
-            9:'Velocidade Máxima Permitida (120km/h)', 
-            10:'Sem ultrapassagem', 
+classes = { 1:'Speed limit (20km/h)',
+            2:'Speed limit (30km/h)', 
+            3:'Speed limit (50km/h)', 
+            4:'Speed limit (60km/h)', 
+            5:'Speed limit (70km/h)', 
+            6:'Speed limit (80km/h)', 
+            7:'End of speed limit (80km/h)', 
+            8:'Speed limit (100km/h)', 
+            9:'Speed limit (120km/h)',
+            10:'No passing', 
             11:'No passing veh over 3.5 tons', 
             12:'Right-of-way at intersection', 
             13:'Priority road', 
@@ -38,7 +38,7 @@ classes = { 1:'Velocidade Máxima Permitida (20km/h)',
             29:'Children crossing', 
             30:'Bicycles crossing', 
             31:'Beware of ice/snow',
-            32:'Wild animals crossing',  
+            32:'Wild animals crossing', 
             33:'End speed + passing limits', 
             34:'Turn right ahead', 
             35:'Turn left ahead', 

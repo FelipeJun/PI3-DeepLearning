@@ -1,15 +1,13 @@
-from ast import While
-import discord
 import uuid
 from discord.ext import commands
+from decouple import config
 # importing modules
-import urllib.request
 from PIL import Image
 import numpy as np
 import os
 from keras.models import load_model
 
-model = load_model('traffic_classifier.h5')
+model = load_model('quilonbot/model/traffic_classifier.h5')
 
 # Dicionario com os tipos de placa
 classes = { 1:'Speed limit (20km/h)',
@@ -100,5 +98,5 @@ async def save(ctx):
   else:
     print("File does not exist")
     
-TOKEN = ("Pegar token no env")
+TOKEN = config("TOKEN_SECRETO")
 bot.run(TOKEN)

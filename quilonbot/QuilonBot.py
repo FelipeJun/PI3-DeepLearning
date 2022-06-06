@@ -2,6 +2,7 @@ import uuid
 from discord.ext import commands
 from decouple import config
 # importing modules
+import tensorflow as tf
 from PIL import Image
 import numpy as np
 import os
@@ -62,15 +63,15 @@ async def on_ready():
 
 #Comando para salvar imagens enviadas no chat na pasta do bot
 # digitar no discord ("!salvar + anexo")
-@bot.event
-async def on_message(message):
-    if message.author == bot.user:
-     return
+# @bot.event
+# async def on_message(message):
+#     if message.author == bot.user:
+#      return
 
-    if message.attachments:
-        await message.channel.send(content=message.attachments[0].url)
+#     if message.attachments:
+#         await message.channel.send(content=message.attachments[0].url)
 
-    await bot.process_commands(message)
+#     await bot.process_commands(message)
     
 @bot.command(name = "placa")
 async def save(ctx):
@@ -80,7 +81,7 @@ async def save(ctx):
       file_path = os.getcwd()
       file_path = file_path + "\\"+imageName
       print(file_path)
-      image = Image.open(file_path)
+      image = Image.open(file_path).convert('RGB')
       image = image.resize((30,30))
       image = np.expand_dims(image, axis=0)
       image = np.array(image)

@@ -3,6 +3,7 @@ from tkinter import filedialog
 from tkinter import *
 from PIL import ImageTk, Image
 import numpy
+import tensorflow as tf
 from keras.models import load_model
 
 model = load_model('quilonbot/model/traffic_classifier.h5')

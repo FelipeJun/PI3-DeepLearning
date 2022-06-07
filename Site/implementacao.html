@@ -1,0 +1,102 @@
+<!DOCTYPE HTML>
+<!--
+	Forty by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Implementação</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo"><strong>BCC</strong> <span>Deep Learning</span></a>
+						<nav>
+							<a href="#menu">Menu</a>
+						</nav>
+					</header>
+
+				<!-- Menu -->
+				<nav id="menu">
+					<ul class="links">
+						<li><a href="index.html">Home</a></li>
+						<li><a href="introducao.html">Introdução</a></li>
+						<li><a href="implementacao.html">Implementação</a></li>
+						<li><a href="resultado.html">Resultados</a></li>
+						<li><a href="referencias.html">Referências</a></li>
+					</ul>
+					<ul class="actions stacked">
+						<li><a href="https://github.com/FelipeJun/PI3-DeepLearning" target="_blank" class="button primary fit">GitHub</a></li>
+					</ul>
+				</nav>
+
+				<!-- Main -->
+					<div id="main" class="alt">
+
+						<!-- One -->
+							<section id="one">
+								<div class="inner">
+									<header class="major">
+										<h1>Inteligência Artificial</h1>
+									</header>
+									<h2>Criação do modelo da IA</h2>
+									<p>Para iniciarmos a IA, pegamos as imagens de placas de trânsito dadas pelo dataset, 
+										fazendo processamento destas e transformando-as em um tipo de data aceita pelo keras ( biblioteca usada para deep learning )</p>
+									<p>Após tratadas, para podermos fazer melhores predições, fazemos um processo chamado 
+										<a href="https://hackernoon.com/what-is-one-hot-encoding-why-and-when-do-you-have-to-use-it-e3c6186d008f" target="_blank">"One Hot encoding"</a>, 
+										que categoriza estas variaváveis em um tipo de formulario para facilitar o algoritmo.</p>
+										<img src="images/1.PNG" alt=""/>
+										<img src="images/2.PNG" alt=""/>
+
+									<h2>Implementação do modelo</h2>	
+									<p>Criamos o modelo do tipo "Sequencial", para podermos inserir camadas da rede neural em série,
+										utilizando as funções de ativação relu e softmax. Por fim, aplicado o fit e testado a acurácia de nosso modelo.</p>
+										<img src="images/3.PNG" alt=""/>
+										<img src="images/4.PNG" alt=""/>
+									<h2>Testando a acurácia do modelo</h2>
+									<p>Ao final do fit, salvamos o modelo e testamo-os com os dados dos CSVs de train e Test, e criamos um novo modelo testado.</p>
+									<img src="images/5.PNG" alt="">
+								</div>
+								<div class="inner">
+									<ul class="actions">
+										<li><a href="resultado.html" class="button">Resultados</a></li>
+									</ul>
+								</div>
+
+							</section>
+					</div>
+				<!-- Footer -->
+					<footer id="footer">
+						<div class="inner">
+							<ul class="icons">
+								<li><a href="https://github.com/FelipeJun/PI3-DeepLearning" 
+									class="icon brands alt fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+							<ul class="copyright">
+								<li>Design usado: <a href="https://html5up.net">HTML5 UP</a></li>
+							</ul>
+						</div>
+					</footer>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
